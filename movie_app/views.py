@@ -6,7 +6,7 @@ from .models import Director, Movie, Review
 from .serializers import DirectorSerializer, MovieSerializer, ReviewSerializer
 
 
-@api_view(['GET'])
+@api_view(['GET', 'PUT'])
 def directors_api_view(request):
     if request.method == 'GET':
         queryset = Director.objects.all()
